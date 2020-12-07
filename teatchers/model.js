@@ -1,7 +1,8 @@
+require('dotenv').config()
 const { Sequelize, Model, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('joaoferr_dtam', 'joaoferr_dtam', '5SNhnBGKPUJTYy2M', {
-    host: 'www.joaoferreira.eu',
-    dialect: 'mysql'
+const sequelize = new Sequelize(process.env.DATABASE, process.env.USERNAME, process.env.PASSWORD, {
+  host: process.env.HOST,
+  dialect: process.env.DIALECT
 });
 
 class Teatcher extends Model {}
