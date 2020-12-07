@@ -37,5 +37,4 @@ db.once('open', function() {
 
 app.listen(port, () => {
     console.log("App is running on " + port);
-    console.log(process.env.DATABASE, process.env.USER, process.env.PASSWORD, process.env.HOST, process.env.DIALECT)
 })
